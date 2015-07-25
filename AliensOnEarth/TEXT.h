@@ -8,7 +8,6 @@
 
 #import "ExportDataManager.h"
 
-@interface TEXT : NSObject  <ExportDataDelegate>
-
+@interface TEXT : NSObject <ExportDataDelegate>
 
 @end

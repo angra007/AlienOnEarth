@@ -13,7 +13,6 @@ typedef NS_ENUM(NSInteger, ExportDataType) {
     eText
 };
 
-
 @class AliensOnEarthModelObject;
 
 @protocol ExportDataDelegate <NSObject>
@@ -23,12 +22,10 @@ typedef NS_ENUM(NSInteger, ExportDataType) {
 
 @end
 
-
 @interface ExportDataManager : NSObject
 
+@property (nonatomic, weak) id<ExportDataDelegate> delegate;
+
 - (void)exportToFileWithData:(AliensOnEarthModelObject*)alienData ofType:(ExportDataType)type;
-@property (nonatomic , weak) id<ExportDataDelegate> delegate;
 
 @end
-
-

@@ -8,7 +8,6 @@
 
 #import "ExportDataManager.h"
 
-@interface PDF : NSObject  <ExportDataDelegate>
-
+@interface PDF : NSObject <ExportDataDelegate>
 
 @end

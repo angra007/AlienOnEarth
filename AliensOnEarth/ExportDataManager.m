@@ -14,22 +14,22 @@
 
 @interface ExportDataManager ()
 
-@property (nonatomic, strong) PDF *pdf;
-@property (nonatomic, strong) TEXT *text;
+@property (nonatomic, strong) PDF* pdf;
+@property (nonatomic, strong) TEXT* text;
 @end
-
 
 @implementation ExportDataManager
 
-
-- (PDF *)pdf {
+- (PDF*)pdf
+{
     if (!_pdf) {
         _pdf = [[PDF alloc] init];
     }
     return _pdf;
 }
 
-- (TEXT *)text {
+- (TEXT*)text
+{
     if (!_text) {
         _text = [[TEXT alloc] init];
     }
@@ -46,8 +46,7 @@
     }
 }
 
-
-- (void)exportToFileWithData:(AliensOnEarthModelObject *)alienData ofType:(ExportDataType)type
+- (void)exportToFileWithData:(AliensOnEarthModelObject*)alienData ofType:(ExportDataType)type
 {
     [self initilizeDelegateForType:type];
     
@@ -56,7 +55,7 @@
     }
     
     if ([_delegate respondsToSelector:@selector(createFileToExportData)]) {
-         [_delegate createFileToExportData];
+        [_delegate createFileToExportData];
     }
 }
 
