@@ -74,7 +74,7 @@
         [self takeInputFromTheUser];
         
         // Check if it is in proper format
-        if ([self validateInput]) {
+        if ([self validateInputString]) {
             
             // Check if data with same code name is already saved or not
             if ([self isDataAlreadySaved]) {
@@ -331,7 +331,7 @@
  
  @return BOOL: YES if entries are correct , NO if entries are not correct
  */
-- (BOOL)validateInput
+- (BOOL)validateInputString
 {
     BOOL isValid = NO;
     BOOL wasItemRemoved = NO;

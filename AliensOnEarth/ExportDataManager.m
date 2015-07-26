@@ -39,10 +39,10 @@
 - (void)initilizeDelegateForType:(ExportDataType)type
 {
     if (type == eText) {
-        _delegate = _text;
+        self.delegate = _text;
     }
     else if (type == ePDF) {
-        _delegate = _pdf;
+        self.delegate = _pdf;
     }
 }
 
