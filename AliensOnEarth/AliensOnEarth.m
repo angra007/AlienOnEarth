@@ -7,14 +7,14 @@
 //
 
 #import "AliensOnEarth.h"
-#import "AliensOnEarthModelObject.h"
+#import "AliensOnEarthModel.h"
 #import "AlienOnEarthUtilityClass.h"
-#import "ExportDataManager.h"
+#import "ExportManager.h"
 @interface AliensOnEarth ()
 
-@property (nonatomic, strong) AliensOnEarthModelObject* aliensOnEarth;
+@property (nonatomic, strong) AliensOnEarthModel* aliensOnEarth;
 @property (nonatomic, strong) NSMutableDictionary* alienDetail;
-@property (nonatomic, strong) ExportDataManager* exportDataManager;
+@property (nonatomic, strong) ExportManager* exportManager;
 
 @end
 
@@ -31,12 +31,12 @@
     return _alienDetail;
 }
 
-- (ExportDataManager*)exportDataManager
+- (ExportManager*)exportManager
 {
-    if (!_exportDataManager) {
-        _exportDataManager = [[ExportDataManager alloc] init];
+    if (!_exportManager) {
+        _exportManager = [[ExportManager alloc] init];
     }
-    return _exportDataManager;
+    return _exportManager;
 }
 
 #pragma mark -  Registration Related Methods
@@ -95,7 +95,7 @@
                 if ([[NSString stringWithUTF8String:option] caseInsensitiveCompare:@"YES"] == NSOrderedSame) {
                     
                     // Set the model object
-                    self.aliensOnEarth = [[AliensOnEarthModelObject alloc] initWithDictinory:self.alienDetail];
+                    self.aliensOnEarth = [[AliensOnEarthModel alloc] initWithDictinory:self.alienDetail];
                     
                     // Save the data locally
                     if ([self saveDetailsLocally]) {
@@ -210,7 +210,7 @@
         NSLog(@"%@", dataDictionary);
         
         // Set the model object
-        self.aliensOnEarth = [[AliensOnEarthModelObject alloc] initWithDictinory:dataDictionary];
+        self.aliensOnEarth = [[AliensOnEarthModel alloc] initWithDictinory:dataDictionary];
         
         // Export it
         [self exportDataToFile];
@@ -230,7 +230,7 @@
     scanf("%s", option);
     
     if ([[NSString stringWithUTF8String:option] caseInsensitiveCompare:@"YES"] == NSOrderedSame) {
-        [self startExport];
+        [self.exportManager startExportWithData:self.aliensOnEarth];
     }
     else {
         // Display a meaage and quit the application
@@ -239,29 +239,7 @@
     }
 }
 
-/**
- This method ask user for the method of export and then start export
- */
-- (void)startExport
-{
-    int option;
-    
-    NSLog(@"How would You Like Your Data?");
-    NSLog(@"1. PDF Format");
-    NSLog(@"2. Text Format");
-    // If new format is introduced it goes here
-    scanf("%d", &option);
-    switch (option) {
-        case 1:
-            [self.exportDataManager exportToFileWithData:self.aliensOnEarth ofType:ePDF];
-            break;
-        case 2:
-            [self.exportDataManager exportToFileWithData:self.aliensOnEarth ofType:eText];
-            break;
-        default:
-            NSLog(@"Incorrect choice.. Please Try Again");
-    }
-}
+
 
 #pragma mark - Save Details Related Methods
 #pragma mark -

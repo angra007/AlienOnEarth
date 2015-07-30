@@ -1,13 +1,16 @@
 //
-//  ExportAsPDF.h
+//  PDF.h
 //  AliensOnEarth
 //
-//  Created by Ankit Angra on 21/07/15.
+//  Created by Ankit Angra on 30/07/15.
 //  Copyright (c) 2015 Ankit Angra. All rights reserved.
 //
 
-#import "ExportDataManager.h"
+#import "ExportDataSuperClass.h"
 
-@interface PDF : NSObject <ExportDataDelegate>
+@interface PDF : ExportDataSuperClass
+
+- (void)exportDataForObject:(AliensOnEarthModel*)aleanData;
+
 
 @end

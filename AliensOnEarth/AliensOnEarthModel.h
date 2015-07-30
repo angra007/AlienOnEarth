@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AliensOnEarthModelObject : NSObject
+@interface AliensOnEarthModel : NSObject
 
 @property (nonatomic, strong) NSString* codeName;
 @property (nonatomic, strong) NSString* bloodColor;
