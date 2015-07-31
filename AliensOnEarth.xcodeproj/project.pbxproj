@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DEC280351B6C07250022CBCA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		DECF8CE21B6A861F00B4C1DD /* ExportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportManager.h; sourceTree = "<group>"; };
 		DECF8CE31B6A861F00B4C1DD /* ExportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportManager.m; sourceTree = "<group>"; };
 		DECF8CE51B6A86A500B4C1DD /* ExportDataSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportDataSuperClass.h; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		DED5F2EB1B5E97EC0016D046 /* AliensOnEarth */ = {
 			isa = PBXGroup;
 			children = (
+				DEC280351B6C07250022CBCA /* README.txt */,
 				DED5F3081B5E99C60016D046 /* Utility */,
 				DED5F2FB1B5E98CB0016D046 /* ExportData */,
 				DED5F2F71B5E98870016D046 /* RootClass */,
