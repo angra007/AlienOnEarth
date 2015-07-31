@@ -7,11 +7,11 @@
 //
 
 #import "TEXT.h"
-#import "AliensOnEarthObject.h"
+#import "AliensOnEarthModel.h"
 
 @implementation TEXT
 
-- (void)exportDataForObject:(AliensOnEarthObject*)aleanData
+- (void)exportDataForObject:(AliensOnEarthModel*)aleanData
 {
     [self loadData:aleanData];
     
