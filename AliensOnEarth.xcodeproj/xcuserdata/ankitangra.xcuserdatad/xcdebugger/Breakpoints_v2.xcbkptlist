@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AliensOnEarth/AliensOnEarth.m"
-            timestampString = "459967253.599292"
+            filePath = "AliensOnEarth/ExportManager.m"
+            timestampString = "459968800.549682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
-            landmarkName = "-exportDataToFile"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-GetSubclassesForClass:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
