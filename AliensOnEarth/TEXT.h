@@ -10,7 +10,7 @@
 
 @interface TEXT : ExportDataSuperClass
 
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData;
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData;
 
 
 @end

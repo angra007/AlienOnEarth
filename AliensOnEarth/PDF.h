@@ -10,7 +10,7 @@
 
 @interface PDF : ExportDataSuperClass
 
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData;
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData;
 
 
 @end

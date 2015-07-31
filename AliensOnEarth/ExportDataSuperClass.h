@@ -15,9 +15,9 @@
 @property (nonatomic, strong) NSMutableDictionary* dataDictionary;
 @property (nonatomic, strong) NSString* pathToDocumentDirectory;
 
-- (void)loadData:(AliensOnEarthModel*)alienObject;
-- (BOOL)fileCreatedAtPath:(NSString*)filePath;
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData;
+- (void)dataFetcherForObject:(AliensOnEarthModel*)alienObject;
+- (BOOL)fileCreaterAtPath:(NSString*)filePath;
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData;
 
 
 @end

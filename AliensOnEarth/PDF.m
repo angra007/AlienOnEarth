@@ -13,14 +13,14 @@
 
 
 
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
 {
-    [self loadData:aleanData];
+    [self dataFetcherForObject:aleanData];
     
     NSString* documentsDirectory = self.pathToDocumentDirectory;
     NSString* pdfFileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf", aleanData.codeName]];
     
-    if ([self fileCreatedAtPath:pdfFileName]) {
+    if ([self fileCreaterAtPath:pdfFileName]) {
         NSLog(@"Your data has been exported.... Have a Nice Day");
     }
     else {

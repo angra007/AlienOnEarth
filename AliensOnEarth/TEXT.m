@@ -11,14 +11,14 @@
 
 @implementation TEXT
 
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
 {
-    [self loadData:aleanData];
+    [self dataFetcherForObject:aleanData];
     
     NSString* documentsDirectory = self.pathToDocumentDirectory;
     NSString* textFileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt", aleanData.codeName]];
     
-    if ([self fileCreatedAtPath:textFileName]) {
+    if ([self fileCreaterAtPath:textFileName]) {
         NSLog(@"Your data has been exported in your document directory.... Have a Nice Day");
     }
     else {

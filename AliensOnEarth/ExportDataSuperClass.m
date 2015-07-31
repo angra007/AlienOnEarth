@@ -13,7 +13,7 @@
 
 @implementation ExportDataSuperClass
 
-- (void)loadData:(AliensOnEarthModel*)alienObject
+- (void)dataFetcherForObject:(AliensOnEarthModel*)alienObject
 {
     self.pathToDocumentDirectory = [[AlienOnEarthUtilityClass sharedInstance] getPathOfDocumentDirectory];
     NSString* filePath = [self.pathToDocumentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"\%@.plist", alienObject.codeName]];
@@ -26,9 +26,8 @@
     }
 }
 
-- (BOOL)fileCreatedAtPath:(NSString*)filePath
+- (BOOL)fileCreaterAtPath:(NSString*)filePath
 {
-    
     /***********************************************************************************************************************************************************/
     //                                                        NOTE : FOR PDF
     //     This piece of code will create the pdf but we will not be able to open that pdf.The correct way to do this is to draw string in a PDF drawing context.
@@ -45,7 +44,7 @@
     return NO;
 }
 
-- (void)exportDataForObject:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
 {
     // Implemented in Base Class
 }

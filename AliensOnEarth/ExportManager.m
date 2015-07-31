@@ -20,7 +20,7 @@
 
 - (void)startExportWithData:(AliensOnEarthModel *)alienData {
     
-    NSArray *allExportType = [self GetSubclassesForClass:[ExportDataSuperClass class]];
+    NSArray *allExportType = [self getSubclassesForClass:[ExportDataSuperClass class]];
     
     if ([allExportType count]) {
         int option;
@@ -37,8 +37,8 @@
         ExportDataSuperClass *object = [[exportType alloc] init];
         
         // Perform Selector to perform the draw operation
-        if ([object respondsToSelector:@selector(exportDataForObject:)]) {
-            [object performSelector:@selector(exportDataForObject:) withObject:alienData];
+        if ([object respondsToSelector:@selector(fileFormatterWithData:)]) {
+            [object performSelector:@selector(fileFormatterWithData:) withObject:alienData];
         }
     }
     else {
@@ -47,7 +47,7 @@
 }
 
 // This is a very expensive operation . We might have to cache it if this method is called multiple times
-- (NSArray *)GetSubclassesForClass:(Class) parentClass {
+- (NSArray *)getSubclassesForClass:(Class) parentClass {
     // Get the entire list of classes
     int numClasses = objc_getClassList(NULL, 0);
     Class *classes = NULL;
