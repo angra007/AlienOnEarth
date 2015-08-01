@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class AliensOnEarthModel;
+#import "AlienOnEarthModel.h"
 
 @interface ExportManager : NSObject
 
-- (void)startExportWithData:(AliensOnEarthModel *)alienData;
+- (void)startExportWithData:(AlienOnEarthModel*)alienDetails;
 
 @end

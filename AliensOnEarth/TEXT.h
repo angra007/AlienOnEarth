@@ -6,11 +6,10 @@
 //  Copyright (c) 2015 Ankit Angra. All rights reserved.
 //
 
-#import "ExportDataSuperClass.h"
+#import "Exporter.h"
 
-@interface TEXT : ExportDataSuperClass
+@interface TEXT : Exporter
 
-- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData;
-
+- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData;
 
 @end

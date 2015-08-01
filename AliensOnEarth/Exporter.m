@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Ankit Angra. All rights reserved.
 //
 
-#import "ExportDataSuperClass.h"
+#import "Exporter.h"
 #import "ExportManager.h"
-#import "AliensOnEarthModel.h"
+#import "AlienOnEarthModel.h"
 #import "AlienOnEarthUtilityClass.h"
 
-@implementation ExportDataSuperClass
+@implementation Exporter
 
-- (void)dataFetcherForObject:(AliensOnEarthModel*)alienObject
+- (void)dataFetcherForObject:(AlienOnEarthModel*)alienObject
 {
     self.pathToDocumentDirectory = [[AlienOnEarthUtilityClass sharedInstance] getPathOfDocumentDirectory];
     NSString* filePath = [self.pathToDocumentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"\%@.plist", alienObject.codeName]];
@@ -44,7 +44,7 @@
     return NO;
 }
 
-- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
 {
     // Implemented in Base Class
 }

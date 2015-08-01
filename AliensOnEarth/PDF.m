@@ -7,13 +7,11 @@
 //
 
 #import "PDF.h"
-#import "AliensOnEarthModel.h"
+#import "AlienOnEarthModel.h"
 
 @implementation PDF
 
-
-
-- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
 {
     [self dataFetcherForObject:aleanData];
     
@@ -27,7 +25,5 @@
         NSLog(@"Some Error occured .... Please Try Later");
     }
 }
-
-
 
 @end

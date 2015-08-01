@@ -7,11 +7,11 @@
 //
 
 #import "TEXT.h"
-#import "AliensOnEarthModel.h"
+#import "AlienOnEarthModel.h"
 
 @implementation TEXT
 
-- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData
+- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
 {
     [self dataFetcherForObject:aleanData];
     
@@ -27,4 +27,3 @@
 }
 
 @end
-

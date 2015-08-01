@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         AliensOnEarth *alienOnEarth = [[AliensOnEarth alloc] init];
-        [alienOnEarth alienRegistration];
+        [alienOnEarth initilizeRegistration];
     }
     
     return 0;

@@ -8,17 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class AliensOnEarthModel;
-@interface ExportDataSuperClass : NSObject
-
+@class AlienOnEarthModel;
+@interface Exporter : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary* dataDictionary;
 @property (nonatomic, strong) NSString* pathToDocumentDirectory;
 
-- (void)dataFetcherForObject:(AliensOnEarthModel*)alienObject;
+- (void)dataFetcherForObject:(AlienOnEarthModel*)alienObject;
 - (BOOL)fileCreaterAtPath:(NSString*)filePath;
-- (void)fileFormatterWithData:(AliensOnEarthModel*)aleanData;
-
+- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData;
 
 @end
-

@@ -10,6 +10,6 @@
 
 @interface AliensOnEarth : NSObject
 
-- (void)alienRegistration;
+- (void)initilizeRegistration;
 
 @end

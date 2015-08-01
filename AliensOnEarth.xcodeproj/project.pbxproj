@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEC2803A1B6D3E920022CBCA /* AlienRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC280391B6D3E920022CBCA /* AlienRegistration.m */; };
+		DEC2803E1B6D41F90022CBCA /* AlienDetailsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC2803D1B6D41F90022CBCA /* AlienDetailsFetcher.m */; };
 		DECF8CE41B6A861F00B4C1DD /* ExportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF8CE31B6A861F00B4C1DD /* ExportManager.m */; };
-		DECF8CE71B6A86A500B4C1DD /* ExportDataSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF8CE61B6A86A500B4C1DD /* ExportDataSuperClass.m */; };
+		DECF8CE71B6A86A500B4C1DD /* Exporter.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF8CE61B6A86A500B4C1DD /* Exporter.m */; };
 		DECF8CEA1B6A86FD00B4C1DD /* PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF8CE91B6A86FD00B4C1DD /* PDF.m */; };
 		DECF8CED1B6A876600B4C1DD /* TEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = DECF8CEC1B6A876600B4C1DD /* TEXT.m */; };
 		DED5F2ED1B5E97EC0016D046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5F2EC1B5E97EC0016D046 /* main.m */; };
-		DED5F2F61B5E984D0016D046 /* AliensOnEarthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5F2F51B5E984D0016D046 /* AliensOnEarthModel.m */; };
+		DED5F2F61B5E984D0016D046 /* AlienOnEarthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5F2F51B5E984D0016D046 /* AlienOnEarthModel.m */; };
 		DED5F2FA1B5E989F0016D046 /* AliensOnEarth.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5F2F91B5E989F0016D046 /* AliensOnEarth.m */; };
 		DED5F30B1B5E99E20016D046 /* AlienOnEarthUtilityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5F30A1B5E99E20016D046 /* AlienOnEarthUtilityClass.m */; };
 /* End PBXBuildFile section */
@@ -31,18 +33,22 @@
 
 /* Begin PBXFileReference section */
 		DEC280351B6C07250022CBCA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		DEC280381B6D3E920022CBCA /* AlienRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlienRegistration.h; sourceTree = "<group>"; };
+		DEC280391B6D3E920022CBCA /* AlienRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlienRegistration.m; sourceTree = "<group>"; };
+		DEC2803C1B6D41F90022CBCA /* AlienDetailsFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlienDetailsFetcher.h; sourceTree = "<group>"; };
+		DEC2803D1B6D41F90022CBCA /* AlienDetailsFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlienDetailsFetcher.m; sourceTree = "<group>"; };
 		DECF8CE21B6A861F00B4C1DD /* ExportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportManager.h; sourceTree = "<group>"; };
 		DECF8CE31B6A861F00B4C1DD /* ExportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportManager.m; sourceTree = "<group>"; };
-		DECF8CE51B6A86A500B4C1DD /* ExportDataSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportDataSuperClass.h; sourceTree = "<group>"; };
-		DECF8CE61B6A86A500B4C1DD /* ExportDataSuperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportDataSuperClass.m; sourceTree = "<group>"; };
+		DECF8CE51B6A86A500B4C1DD /* Exporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exporter.h; sourceTree = "<group>"; };
+		DECF8CE61B6A86A500B4C1DD /* Exporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exporter.m; sourceTree = "<group>"; };
 		DECF8CE81B6A86FD00B4C1DD /* PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDF.h; sourceTree = "<group>"; };
 		DECF8CE91B6A86FD00B4C1DD /* PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDF.m; sourceTree = "<group>"; };
 		DECF8CEB1B6A876600B4C1DD /* TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEXT.h; sourceTree = "<group>"; };
 		DECF8CEC1B6A876600B4C1DD /* TEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEXT.m; sourceTree = "<group>"; };
 		DED5F2E91B5E97EC0016D046 /* AliensOnEarth */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AliensOnEarth; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED5F2EC1B5E97EC0016D046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DED5F2F41B5E984D0016D046 /* AliensOnEarthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliensOnEarthModel.h; sourceTree = "<group>"; };
-		DED5F2F51B5E984D0016D046 /* AliensOnEarthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliensOnEarthModel.m; sourceTree = "<group>"; };
+		DED5F2F41B5E984D0016D046 /* AlienOnEarthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlienOnEarthModel.h; sourceTree = "<group>"; };
+		DED5F2F51B5E984D0016D046 /* AlienOnEarthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlienOnEarthModel.m; sourceTree = "<group>"; };
 		DED5F2F81B5E989F0016D046 /* AliensOnEarth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliensOnEarth.h; sourceTree = "<group>"; };
 		DED5F2F91B5E989F0016D046 /* AliensOnEarth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliensOnEarth.m; sourceTree = "<group>"; };
 		DED5F3091B5E99E20016D046 /* AlienOnEarthUtilityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlienOnEarthUtilityClass.h; sourceTree = "<group>"; };
@@ -60,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEC280371B6D3E620022CBCA /* Alien Registration */ = {
+			isa = PBXGroup;
+			children = (
+				DEC280381B6D3E920022CBCA /* AlienRegistration.h */,
+				DEC280391B6D3E920022CBCA /* AlienRegistration.m */,
+			);
+			name = "Alien Registration";
+			sourceTree = "<group>";
+		};
+		DEC2803B1B6D41C80022CBCA /* Alien Detail Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				DEC2803C1B6D41F90022CBCA /* AlienDetailsFetcher.h */,
+				DEC2803D1B6D41F90022CBCA /* AlienDetailsFetcher.m */,
+			);
+			name = "Alien Detail Fetcher";
+			sourceTree = "<group>";
+		};
 		DECF8CDE1B6A85C600B4C1DD /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +96,8 @@
 		DECF8CDF1B6A85E300B4C1DD /* Super Class */ = {
 			isa = PBXGroup;
 			children = (
-				DECF8CE51B6A86A500B4C1DD /* ExportDataSuperClass.h */,
-				DECF8CE61B6A86A500B4C1DD /* ExportDataSuperClass.m */,
+				DECF8CE51B6A86A500B4C1DD /* Exporter.h */,
+				DECF8CE61B6A86A500B4C1DD /* Exporter.m */,
 			);
 			name = "Super Class";
 			sourceTree = "<group>";
@@ -118,7 +142,7 @@
 				DEC280351B6C07250022CBCA /* README.txt */,
 				DED5F3081B5E99C60016D046 /* Utility */,
 				DED5F2FB1B5E98CB0016D046 /* ExportData */,
-				DED5F2F71B5E98870016D046 /* RootClass */,
+				DED5F2F71B5E98870016D046 /* Registration  */,
 				DED5F2F31B5E98200016D046 /* Model */,
 				DED5F2EC1B5E97EC0016D046 /* main.m */,
 			);
@@ -128,19 +152,21 @@
 		DED5F2F31B5E98200016D046 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DED5F2F41B5E984D0016D046 /* AliensOnEarthModel.h */,
-				DED5F2F51B5E984D0016D046 /* AliensOnEarthModel.m */,
+				DED5F2F41B5E984D0016D046 /* AlienOnEarthModel.h */,
+				DED5F2F51B5E984D0016D046 /* AlienOnEarthModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		DED5F2F71B5E98870016D046 /* RootClass */ = {
+		DED5F2F71B5E98870016D046 /* Registration  */ = {
 			isa = PBXGroup;
 			children = (
+				DEC2803B1B6D41C80022CBCA /* Alien Detail Fetcher */,
+				DEC280371B6D3E620022CBCA /* Alien Registration */,
 				DED5F2F81B5E989F0016D046 /* AliensOnEarth.h */,
 				DED5F2F91B5E989F0016D046 /* AliensOnEarth.m */,
 			);
-			name = RootClass;
+			name = "Registration ";
 			sourceTree = "<group>";
 		};
 		DED5F2FB1B5E98CB0016D046 /* ExportData */ = {
@@ -219,12 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED5F2F61B5E984D0016D046 /* AliensOnEarthModel.m in Sources */,
+				DED5F2F61B5E984D0016D046 /* AlienOnEarthModel.m in Sources */,
 				DECF8CEA1B6A86FD00B4C1DD /* PDF.m in Sources */,
 				DED5F2FA1B5E989F0016D046 /* AliensOnEarth.m in Sources */,
 				DECF8CE41B6A861F00B4C1DD /* ExportManager.m in Sources */,
+				DEC2803E1B6D41F90022CBCA /* AlienDetailsFetcher.m in Sources */,
+				DEC2803A1B6D3E920022CBCA /* AlienRegistration.m in Sources */,
 				DED5F30B1B5E99E20016D046 /* AlienOnEarthUtilityClass.m in Sources */,
-				DECF8CE71B6A86A500B4C1DD /* ExportDataSuperClass.m in Sources */,
+				DECF8CE71B6A86A500B4C1DD /* Exporter.m in Sources */,
 				DECF8CED1B6A876600B4C1DD /* TEXT.m in Sources */,
 				DED5F2ED1B5E97EC0016D046 /* main.m in Sources */,
 			);

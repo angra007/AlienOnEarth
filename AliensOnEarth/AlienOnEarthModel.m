@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Ankit Angra. All rights reserved.
 //
 
-#import "AliensOnEarthModel.h"
+#import "AlienOnEarthModel.h"
 
-@implementation AliensOnEarthModel
+@implementation AlienOnEarthModel
 
 - (instancetype)initWithDictinory:(NSDictionary*)dictinory
 {
