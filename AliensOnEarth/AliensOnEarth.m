@@ -8,7 +8,7 @@
 
 #import "AliensOnEarth.h"
 #import "AlienRegistration.h"
-#import "AlienDetailsFetcher.h"
+#import "AlienDetailsReader.h"
 
 @implementation AliensOnEarth
 
@@ -26,7 +26,7 @@
     if ([[NSString stringWithUTF8String:option] caseInsensitiveCompare:@"YES"] == NSOrderedSame) {
         NSLog(@"Enter your Code Name");
         scanf("%s", codeName);
-        AlienDetailsFetcher* detailsFetcher = [[AlienDetailsFetcher alloc] init];
+        AlienDetailsReader* detailsFetcher = [[AlienDetailsReader alloc] init];
         [detailsFetcher viewRegisteredAlienWithCodeName:[NSString stringWithUTF8String:codeName]];
     }
     else {

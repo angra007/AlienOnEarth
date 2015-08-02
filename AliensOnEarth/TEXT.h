@@ -10,6 +10,6 @@
 
 @interface TEXT : Exporter
 
-- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData;
+- (void)createFileWithData:(AlienOnEarthModel*)aleanData;
 
 @end

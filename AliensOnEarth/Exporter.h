@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class AlienOnEarthModel;
+
+typedef void (^DataWritterCompletionBlock)(BOOL sucess);
+
 @interface Exporter : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary* dataDictionary;
 @property (nonatomic, strong) NSString* pathToDocumentDirectory;
 
-- (void)dataFetcherForObject:(AlienOnEarthModel*)alienObject;
-- (BOOL)fileCreaterAtPath:(NSString*)filePath;
-- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData;
+- (void)provideDataForObject:(AlienOnEarthModel*)alienObject;
+- (void)writeFileAtPath:(NSString*)filePath withCompletionHandler:(DataWritterCompletionBlock)completionBlock;
+- (void)createFileWithData:(AlienOnEarthModel*)aleanData;
 
 @end

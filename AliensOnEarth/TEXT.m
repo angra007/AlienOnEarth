@@ -11,19 +11,25 @@
 
 @implementation TEXT
 
-- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
+- (void)createFileWithData:(AlienOnEarthModel*)aleanData
 {
-    [self dataFetcherForObject:aleanData];
+    [self provideDataForObject:aleanData];
     
     NSString* documentsDirectory = self.pathToDocumentDirectory;
-    NSString* textFileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt", aleanData.codeName]];
+    NSString* textFilePath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt", aleanData.codeName]];
     
-    if ([self fileCreaterAtPath:textFileName]) {
-        NSLog(@"Your data has been exported in your document directory.... Have a Nice Day");
-    }
-    else {
-        NSLog(@"Some Error occured .... Please Try Later");
-    }
+    DataWritterCompletionBlock completionHandler = ^(BOOL success) {
+        if (success == YES) {
+            NSLog(@"Your data has been exported in your document directory.... Have a Nice Day");
+        }
+        else {
+            NSLog(@"Some Error occured .... Please Try Later");
+        }
+        
+    };
+    
+    [self writeFileAtPath:textFilePath withCompletionHandler:completionHandler];
+  
 }
 
 @end

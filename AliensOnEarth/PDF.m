@@ -11,19 +11,24 @@
 
 @implementation PDF
 
-- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
+- (void)createFileWithData:(AlienOnEarthModel*)aleanData
 {
-    [self dataFetcherForObject:aleanData];
+    [self provideDataForObject:aleanData];
     
     NSString* documentsDirectory = self.pathToDocumentDirectory;
-    NSString* pdfFileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf", aleanData.codeName]];
+    NSString* pdfFilePath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf", aleanData.codeName]];
     
-    if ([self fileCreaterAtPath:pdfFileName]) {
-        NSLog(@"Your data has been exported.... Have a Nice Day");
-    }
-    else {
-        NSLog(@"Some Error occured .... Please Try Later");
-    }
+    DataWritterCompletionBlock completionHandler = ^(BOOL success) {
+        if (success == YES) {
+            NSLog(@"Your data has been exported in your document directory.... Have a Nice Day");
+        }
+        else {
+            NSLog(@"Some Error occured .... Please Try Later");
+        }
+        
+    };
+    
+    [self writeFileAtPath:pdfFilePath withCompletionHandler:completionHandler];
 }
 
 @end

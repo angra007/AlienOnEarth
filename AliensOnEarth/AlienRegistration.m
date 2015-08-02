@@ -40,10 +40,10 @@
     NSLog(@"Please Answer the following question");
     do {
         // Take the input
-        [self takeInputFromTheUser];
+        [self readInput];
         
         // Check if it is in proper format
-        if ([self validateInputString]) {
+        if ([self validateInput]) {
             
             // Check if data with same code name is already saved or not
             if ([self isDataAlreadySaved]) {
@@ -120,7 +120,7 @@
 /**
  This method is responsible to take input from the console
  */
-- (void)takeInputFromTheUser
+- (void)readInput
 {
     char codeName[100], bloodColor[100], homePlanet[100];
     char numberOfAntennas[100], numberOfLegs[100]; // These are made character because if in case user tries to enter non-numeric value compiler will not allow to do so
@@ -173,7 +173,7 @@
  
  @return BOOL: YES if entries are correct , NO if entries are not correct
  */
-- (BOOL)validateInputString
+- (BOOL)validateInput
 {
     BOOL isValid = NO;
     BOOL wasItemRemoved = NO;

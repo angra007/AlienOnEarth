@@ -37,8 +37,8 @@
             Exporter* object = [[exportType alloc] init];
             
             // Perform Selector to perform the draw operation
-            if ([object respondsToSelector:@selector(fileFormatterWithData:)]) {
-                [object performSelector:@selector(fileFormatterWithData:) withObject:alienDetails];
+            if ([object respondsToSelector:@selector(createFileWithData:)]) {
+                [object performSelector:@selector(createFileWithData:) withObject:alienDetails];
             }
         }
         else {

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AlienDetailsFetcher : NSObject
+@interface AlienDetailsReader : NSObject
 
 - (void)viewRegisteredAlienWithCodeName:(NSString*)codeName;
 

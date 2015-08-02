@@ -11,9 +11,15 @@
 #import "AlienOnEarthModel.h"
 #import "AlienOnEarthUtilityClass.h"
 
+@interface Exporter ()
+
+@property (nonatomic, strong) DataWritterCompletionBlock completionBlock;
+
+@end
+
 @implementation Exporter
 
-- (void)dataFetcherForObject:(AlienOnEarthModel*)alienObject
+- (void)provideDataForObject:(AlienOnEarthModel*)alienObject
 {
     self.pathToDocumentDirectory = [[AlienOnEarthUtilityClass sharedInstance] getPathOfDocumentDirectory];
     NSString* filePath = [self.pathToDocumentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"\%@.plist", alienObject.codeName]];
@@ -26,7 +32,7 @@
     }
 }
 
-- (BOOL)fileCreaterAtPath:(NSString*)filePath
+- (void)writeFileAtPath:(NSString*)filePath withCompletionHandler:(DataWritterCompletionBlock)completionHandler
 {
     /***********************************************************************************************************************************************************/
     //                                                        NOTE : FOR PDF
@@ -37,14 +43,19 @@
     //     is not available for Command Line Application (cannot be imported).
     /***********************************************************************************************************************************************************/
     
+    self.completionBlock = [completionHandler copy];
+    
     NSString* content = [NSString stringWithFormat:@"%@", self.dataDictionary];
     if ([content writeToFile:filePath atomically:YES encoding:NSStringEncodingConversionAllowLossy error:nil]) {
-        return YES;
+        self.completionBlock(YES);
     }
-    return NO;
+    else {
+        self.completionBlock(NO);
+    }
+  
 }
 
-- (void)fileFormatterWithData:(AlienOnEarthModel*)aleanData
+- (void)createFileWithData:(AlienOnEarthModel*)aleanData
 {
     // Implemented in Base Class
 }
